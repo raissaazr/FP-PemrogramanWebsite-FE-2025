@@ -4,6 +4,7 @@ import Register from "./pages/Register";
 import Sandbox from "./pages/Sandbox";
 import Login from "./pages/Login";
 import ProfilePage from "./pages/ProfilePage";
+import MyProjectsPage from "./pages/MyProjectsPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/sandbox" element={<Sandbox />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/my-projects" element={<MyProjectsPage />} />
       </Routes>
     </>
   );
