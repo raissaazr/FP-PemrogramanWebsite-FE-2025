@@ -11,6 +11,10 @@ import EditQuiz from "./pages/EditQuiz";
 import Quiz from "./pages/Quiz";
 import ProtectedRoute from "./routes/ProtectedRoutes";
 
+// 📌 TAMBAHAN 1: Import Komponen Game Pair or No Pair
+import PairOrNoPairGame from "./pages/pair-or-no-pair";
+import CreatePairOrNoPair from "./pages/pair-or-no-pair/create";
+
 function App() {
   return (
     <>
@@ -21,11 +25,18 @@ function App() {
         <Route path="/sandbox" element={<Sandbox />} />
         <Route path="/quiz/play/:id" element={<Quiz />} />
 
+        {/* 📌 TAMBAHAN 2: Daftarkan Route untuk Game Anda */}
+        <Route path="/pair-or-no-pair/:gameId" element={<PairOrNoPairGame />} />
+
         <Route element={<ProtectedRoute />}>
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/my-projects" element={<MyProjectsPage />} />
           <Route path="/create-projects" element={<CreateProject />} />
           <Route path="/create-quiz" element={<CreateQuiz />} />
+          <Route
+            path="/create-pair-or-no-pair"
+            element={<CreatePairOrNoPair />}
+          />
           <Route path="/quiz/edit/:id" element={<EditQuiz />} />
         </Route>
       </Routes>
