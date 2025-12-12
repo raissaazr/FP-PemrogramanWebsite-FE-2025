@@ -17,6 +17,9 @@ import CreateAnagram from "./pages/Anagram/CreateAnagram";
 import PlayAnagram from "./pages/Anagram/PlayAnagram";
 import EditAnagram from "./pages/Anagram/EditAnagram";
 import Unjumble from "./pages/unjumble/gameUnjumble";
+import CreateUnjumble from "./pages/unjumble/CreateUnjumble";
+import EditUnjumble from "./pages/unjumble/EditUnjumble";
+
 // Fix typo case sensitivity
 
 // 📌 TAMBAHAN 1: Import Komponen Game Pair or No Pair
@@ -32,7 +35,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/sandbox" element={<Sandbox />} />
         <Route path="/quiz/play/:id" element={<Quiz />} />
-        <Route path="/unjumble" element={<Unjumble />} />
+        <Route path="/unjumble/play/:id" element={<Unjumble />} />
         <Route path="/speed-sorting/play/:id" element={<SpeedSorting />} />
         <Route path="/anagram/play/:id" element={<PlayAnagram />} />
         <Route
@@ -60,6 +63,9 @@ function App() {
           />
           <Route path="/create-anagram" element={<CreateAnagram />} />
           <Route path="/anagram/edit/:id" element={<EditAnagram />} />
+
+          <Route path="/create-unjumble" element={<CreateUnjumble />} />
+          <Route path="/unjumble/edit/:id" element={<EditUnjumble />} />
         </Route>
       </Routes>
     </>

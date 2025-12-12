@@ -194,7 +194,7 @@ export default function PlayUnjumble() {
     const percentage = Math.round((score / maxScore) * 100);
 
     return (
-      <div className="flex flex-col min-h-screen p-4 bg-gradient-to-b from-indigo-100 to-indigo-50 justify-center items-center">
+      <div className="flex flex-col min-h-screen p-4 bg-linear-to-b from-indigo-100 to-indigo-50 justify-center items-center">
         <Card className="w-full max-w-md p-8 text-center shadow-2xl">
           <CardHeader>
             <h1 className="text-4xl font-bold text-indigo-700 mb-4">
@@ -282,7 +282,7 @@ export default function PlayUnjumble() {
             </h2>
           </CardHeader>
           <CardContent>
-            <div className="min-h-[80px] p-4 bg-slate-50 rounded-lg border-2 border-dashed border-slate-300 flex flex-wrap gap-2">
+            <div className="min-h-20 p-4 bg-slate-50 rounded-lg border-2 border-dashed border-slate-300 flex flex-wrap gap-2">
               {sortedSentenceWords.map((word) => (
                 <button
                   key={word.id}
